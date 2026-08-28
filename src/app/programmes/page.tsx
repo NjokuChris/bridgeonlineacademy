@@ -10,6 +10,7 @@ import {
   FaAtom,
   FaDna,
   FaPalette,
+  FaCode,
 } from "react-icons/fa6";
 import {
   FiBookOpen,
@@ -110,6 +111,24 @@ const primarySubjects: Subject[] = [
       "Safe and purposeful use of technology. Students learn digital literacy, basic coding concepts, and how to use technology to learn and create.",
     skills:
       "Digital confidence, problem-solving through technology, understanding how technology works.",
+  },
+  {
+    name: "Scratch",
+    icon: FaCode,
+    color: "#FF6B35",
+    description:
+      "Introduction to programming through Scratch, a visual coding language. Students create interactive stories, games, and animations by connecting blocks.",
+    skills:
+      "Logical thinking, sequential reasoning, creativity through code, problem decomposition.",
+  },
+  {
+    name: "Coding",
+    icon: FaCode,
+    color: "#2563EB",
+    description:
+      "Foundational coding skills using beginner-friendly languages. Students learn programming concepts and build simple applications.",
+    skills:
+      "Programming logic, syntax understanding, debugging skills, computational thinking.",
   },
 ];
 
@@ -222,6 +241,24 @@ const secondarySubjects: Subject[] = [
     skills:
       "Athletic skill development, fitness knowledge, strategic thinking in sport, leadership.",
   },
+  {
+    name: "Scratch",
+    icon: FaCode,
+    color: "#FF6B35",
+    description:
+      "Intermediate programming through Scratch. Students create more complex projects, learn how to organize code, and explore computational concepts.",
+    skills:
+      "Advanced logical thinking, understanding algorithms, project organization, creative problem-solving.",
+  },
+  {
+    name: "Coding",
+    icon: FaCode,
+    color: "#2563EB",
+    description:
+      "Advanced programming in languages like Python or JavaScript. Students build real applications and understand software development principles.",
+    skills:
+      "Programming fluency, debugging complex code, software design thinking, technical problem-solving.",
+  },
 ];
 
 const weeklySchedule = [
@@ -257,7 +294,7 @@ export default function ProgrammesPage() {
             <p className="mt-6 leading-relaxed text-muted">
               Live lessons help younger learners build confidence, strong foundations and dependable learning habits.
             </p>
-            <p className="mt-5 text-sm font-semibold text-ink">9 subjects taught live</p>
+            <p className="mt-5 text-sm font-semibold text-ink">11 subjects taught live</p>
           </article>
           <article className="rounded-2xl border border-border p-8 lg:p-10">
             <p className="text-sm font-bold uppercase tracking-widest text-link">Ages 11–17</p>
@@ -265,7 +302,7 @@ export default function ProgrammesPage() {
             <p className="mt-6 leading-relaxed text-muted">
               Structured, teacher-led learning supports students as subjects become deeper and more specialised.
             </p>
-            <p className="mt-5 text-sm font-semibold text-ink">12 subjects taught live</p>
+            <p className="mt-5 text-sm font-semibold text-ink">14 subjects taught live</p>
           </article>
         </div>
       </section>
@@ -366,27 +403,27 @@ export default function ProgrammesPage() {
           </AnimateIn>
 
           <div className="mt-12 overflow-x-auto lg:mt-16">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="border-b-2 border-border">
-                  <th className="bg-white px-4 py-3 text-left font-display font-semibold text-ink lg:px-6 lg:py-4">
-                    Day
-                  </th>
-                  <th className="bg-white px-4 py-3 text-left font-display font-semibold text-ink lg:px-6 lg:py-4">
-                    Morning
-                  </th>
-                  <th className="bg-white px-4 py-3 text-left font-display font-semibold text-ink lg:px-6 lg:py-4">
-                    Afternoon
-                  </th>
-                  <th className="bg-white px-4 py-3 text-left font-display font-semibold text-ink lg:px-6 lg:py-4">
-                    Evening
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {weeklySchedule.map((slot, index) => (
-                  <AnimateIn key={slot.day} delay={0.1 + index * 0.06}>
-                    <tr className={index % 2 === 0 ? "bg-white" : "bg-bg"}>
+            <AnimateIn>
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="border-b-2 border-border">
+                    <th className="bg-white px-4 py-3 text-left font-display font-semibold text-ink lg:px-6 lg:py-4">
+                      Day
+                    </th>
+                    <th className="bg-white px-4 py-3 text-left font-display font-semibold text-ink lg:px-6 lg:py-4">
+                      Morning
+                    </th>
+                    <th className="bg-white px-4 py-3 text-left font-display font-semibold text-ink lg:px-6 lg:py-4">
+                      Afternoon
+                    </th>
+                    <th className="bg-white px-4 py-3 text-left font-display font-semibold text-ink lg:px-6 lg:py-4">
+                      Evening
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {weeklySchedule.map((slot, index) => (
+                    <tr key={slot.day} className={index % 2 === 0 ? "bg-white" : "bg-bg"}>
                       <td className="border-b border-border px-4 py-4 font-semibold text-ink lg:px-6">
                         {slot.day}
                       </td>
@@ -404,10 +441,10 @@ export default function ProgrammesPage() {
                         <span className="inline-block text-sm">{slot.evening}</span>
                       </td>
                     </tr>
-                  </AnimateIn>
-                ))}
-              </tbody>
-            </table>
+                  ))}
+                </tbody>
+              </table>
+            </AnimateIn>
           </div>
 
           <AnimateIn delay={0.4}>
