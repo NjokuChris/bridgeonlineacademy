@@ -67,8 +67,7 @@ export default function SubjectPills() {
             A broad curriculum, taught live.
           </h2>
           <p className="mt-5 leading-relaxed text-muted">
-            From core subjects to languages, sciences and creative learning,
-            students explore a rich Nigerian curriculum.
+            Learn the full Nigerian curriculum, or just the subject you are here for. Whether your child needs Maths and English taught properly, or you want to pick up Coding, Video Editing or Creative Writing on their own, every subject is taught live by a specialist teacher.
           </p>
         </div>
         <div className="mx-auto mt-12 flex max-w-5xl flex-wrap justify-center gap-2.5 sm:gap-5">

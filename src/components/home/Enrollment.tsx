@@ -53,8 +53,8 @@ export default function Enrollment({ type = "student" }: { type?: EnrollmentType
           <form onSubmit={submit} className="mt-8 grid gap-5 sm:grid-cols-2">
             {/* Common fields */}
             <label className="text-sm font-semibold">
-              {isStudent ? "Parent name" : "Full name"}
-              <input required name="name" placeholder={isStudent ? "e.g. Ada Okafor" : "e.g. Oluwaseun Adeyemi"} className={field} />
+              Your name
+              <input required name="name" placeholder="e.g. Ada Okafor" className={field} />
             </label>
             <label className="text-sm font-semibold">
               Email
@@ -68,16 +68,25 @@ export default function Enrollment({ type = "student" }: { type?: EnrollmentType
             {isStudent ? (
               <>
                 <label className="text-sm font-semibold">
-                  Child's name
+                  Name
                   <input required name="childName" placeholder="e.g. Chisom Okafor" className={field} />
                 </label>
                 <label className="text-sm font-semibold">
-                  Child's age
-                  <input required type="number" min="5" max="17" name="childAge" placeholder="e.g. 10" className={field} />
+                  Age (optional)
+                  <input type="number" min="5" name="childAge" placeholder="e.g. 10" className={field} />
                 </label>
                 <label className="text-sm font-semibold">
-                  Current class or grade
-                  <input required name="currentClass" placeholder="e.g. Primary 5" className={field} />
+                  Current class or learning level (optional)
+                  <input name="currentClass" placeholder="e.g. Primary 5, JS 2, or Beginner" className={field} />
+                </label>
+                <label className="text-sm font-semibold">
+                  What would you like to learn?
+                  <select name="learningTrack" className={field}>
+                    <option value="">Select an option</option>
+                    <option value="full-curriculum">Full Nigerian curriculum</option>
+                    <option value="individual-subject">A single subject or skill</option>
+                    <option value="not-sure">Not sure</option>
+                  </select>
                 </label>
                 <label className="text-sm font-semibold">
                   Preferred term to start
@@ -91,8 +100,8 @@ export default function Enrollment({ type = "student" }: { type?: EnrollmentType
                   </select>
                 </label>
                 <label className="text-sm font-semibold sm:col-span-2">
-                  Additional information (optional)
-                  <textarea name="message" rows={4} placeholder="Tell us anything else we should know." className={field} />
+                  Anything else we should know? (optional)
+                  <textarea name="message" rows={4} placeholder="Tell us about your learning goals or any questions." className={field} />
                 </label>
               </>
             ) : (

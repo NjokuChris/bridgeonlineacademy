@@ -277,45 +277,45 @@ export default function ProgrammesPage() {
         <div className="shell max-w-4xl">
           <p className="text-sm font-bold uppercase tracking-widest text-link">Programmes</p>
           <h1 className="mt-5 font-display text-5xl font-semibold leading-tight text-ink lg:text-6xl">
-            Learning for every stage of the journey.
+            Learn your way.
           </h1>
           <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted">
-            BOA offers live online learning for Primary and Secondary students following the Nigerian curriculum.
+            BOA offers two ways to learn: follow the full Nigerian curriculum with ongoing structured teaching, or pick up individual subjects and skills like coding or video editing on their own. Both are taught live by qualified specialists.
           </p>
         </div>
       </section>
 
-      {/* Stages overview */}
+      {/* Learning tracks */}
       <section className="bg-white py-20 lg:py-28">
         <div className="shell grid gap-7 md:grid-cols-2">
           <article className="rounded-2xl border border-border p-8 lg:p-10">
-            <p className="text-sm font-bold uppercase tracking-widest text-link">Ages 5–10</p>
-            <h2 className="mt-5 font-display text-4xl font-semibold text-ink">Primary</h2>
+            <p className="text-sm font-bold uppercase tracking-widest text-link">Structured learning</p>
+            <h2 className="mt-5 font-display text-4xl font-semibold text-ink">Full Curriculum</h2>
             <p className="mt-6 leading-relaxed text-muted">
-              Live lessons help younger learners build confidence, strong foundations and dependable learning habits.
+              Ongoing, structured teaching of the full Nigerian curriculum. Learn at a pace tailored to your level, with live lessons across all core and creative subjects.
             </p>
-            <p className="mt-5 text-sm font-semibold text-ink">11 subjects taught live</p>
+            <p className="mt-5 text-sm font-semibold text-ink">25+ subjects across levels</p>
           </article>
           <article className="rounded-2xl border border-border p-8 lg:p-10">
-            <p className="text-sm font-bold uppercase tracking-widest text-link">Ages 11–17</p>
-            <h2 className="mt-5 font-display text-4xl font-semibold text-ink">Secondary</h2>
+            <p className="text-sm font-bold uppercase tracking-widest text-link">Pick what matters</p>
+            <h2 className="mt-5 font-display text-4xl font-semibold text-ink">Individual Subjects</h2>
             <p className="mt-6 leading-relaxed text-muted">
-              Structured, teacher-led learning supports students as subjects become deeper and more specialised.
+              Choose a single subject or skill without enrolling in the full curriculum. Coding, video editing, creative writing, exam prep, or any subject taught live one-on-one or in small groups.
             </p>
-            <p className="mt-5 text-sm font-semibold text-ink">14 subjects taught live</p>
+            <p className="mt-5 text-sm font-semibold text-ink">Flexible, standalone learning</p>
           </article>
         </div>
       </section>
 
-      {/* Primary subjects */}
+      {/* Full curriculum track: younger learners */}
       <section className="bg-bg py-20 lg:py-28">
         <div className="shell">
           <AnimateIn>
-            <SectionLabel>Primary (Ages 5–10)</SectionLabel>
+            <SectionLabel>For learners ages 5-10</SectionLabel>
           </AnimateIn>
           <AnimateIn delay={0.08}>
             <h2 className="mt-7 font-display text-[2rem] font-semibold leading-tight text-ink lg:text-[2.75rem]">
-              What your child will learn.
+              Building foundations, building confidence.
             </h2>
           </AnimateIn>
 
@@ -347,14 +347,15 @@ export default function ProgrammesPage() {
       </section>
 
       {/* Secondary subjects */}
+      {/* Full curriculum track: older learners */}
       <section className="bg-white py-20 lg:py-28">
         <div className="shell">
           <AnimateIn>
-            <SectionLabel>Secondary (Ages 11–17)</SectionLabel>
+            <SectionLabel>For learners ages 11 and up</SectionLabel>
           </AnimateIn>
           <AnimateIn delay={0.08}>
             <h2 className="mt-7 font-display text-[2rem] font-semibold leading-tight text-ink lg:text-[2.75rem]">
-              A deeper curriculum.
+              Specialist teaching as subjects deepen.
             </h2>
           </AnimateIn>
 

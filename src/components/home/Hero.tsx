@@ -64,9 +64,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted lg:text-lg">
-            Live, teacher-led Nigerian curriculum classes for Primary and
-            Secondary students, designed to give your child structure, support
-            and room to thrive online.
+            Live, teacher-led learning built around what you actually need. Follow the full Nigerian curriculum, or pick up a single subject like coding or video editing, at any age, with structure, support and room to thrive online.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
             <Link

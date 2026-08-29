@@ -2,20 +2,21 @@
 import { useState } from "react";
 
 export const FAQS = [
-  ["What ages do you teach?", "BOA offers Primary and Secondary learning for children aged approximately 5 to 17."],
-  ["Which curriculum do you follow?", "Our programmes follow the Nigerian curriculum."],
+  ["What ages do you teach?", "BOA teaches learners of any age. You can follow the full Nigerian curriculum, or come to us for one subject or skill on its own, coding and video editing are two examples. There's no fixed age cutoff either way."],
+  ["Which curriculum do you follow?", "We offer two learning tracks: the full Nigerian curriculum for ongoing structured learning, or individual subjects and skills like coding, creative writing, or video editing on their own. You choose what fits your needs."],
   ["Are classes live or recorded?", "Classes are live and teacher-led. If you miss a class, we can discuss recording availability during your enrollment conversation."],
-  ["How large are classes?", "We keep classes small so every student gets attention from the teacher. Size varies by subject and stage, but we prioritize class quality over capacity."],
-  ["How much does it cost?", "Fees depend on the programme and your child's needs. A BOA team member will share pricing details when you start the enrollment process."],
-  ["How do I get started?", "Fill out the enrollment form and a BOA team member will contact you directly to discuss your child's age, current class, and the right programme for them."],
+  ["How large are classes?", "We keep classes small so every student gets attention from the teacher. Size varies by subject, but we prioritize class quality over capacity."],
+  ["How much does it cost?", "Fees depend on what you choose, whether that's the full curriculum or a single subject. A BOA team member will share pricing details when you start the enrollment process."],
+  ["How do I get started?", "Fill out the enrollment form and a BOA team member will contact you directly. We'll discuss whether you want the full curriculum or a specific subject, and find the best fit for your needs."],
 ];
 
 export const PAGE_FAQS = [
-  ["What happens after I submit the enrollment form?", "A BOA team member will contact you within one business day via WhatsApp or email, depending on your preference. We'll talk through your child's background and find the best fit within our programmes. The entire process from enrollment form to starting classes typically takes one to two weeks."],
-  ["What technology or equipment does my child need?", "A reliable internet connection and a device to join live lessons (laptop, tablet, or phone). A headset helps with focus, but is not required. Some classes may use an online platform or document tool, which are free and require no special setup."],
-  ["What if we need to pause or stop midway through a term?", "We understand circumstances change. Discuss this with the team during enrollment or anytime after your child starts. We can talk through options based on your situation and our programme schedule."],
-  ["Can siblings enroll together? Does that affect cost?", "Yes, siblings can enrol in the same or different programmes depending on their ages and learning needs. Pricing is per student, but we can discuss any family packages or considerations during the enrollment conversation."],
-  ["How is my child's progress reported to me?", "You'll receive a term report showing what your child has learned, areas of strength, and where they need more support. Teachers can also reach out anytime if they notice something that needs attention during the term, not just at the end."],
+  ["What happens after I submit the enrollment form?", "A BOA team member will contact you within one business day via WhatsApp or email, depending on your preference. We will talk through whether you want the full curriculum or a specific subject, and find the best fit for your needs. The entire process from enrollment form to starting classes typically takes one to two weeks."],
+  ["What technology or equipment do I need?", "A reliable internet connection and a device to join live lessons (laptop, tablet, or phone). A headset helps with focus, but is not required. Some classes may use an online platform or document tool, which are free and require no special setup."],
+  ["What if I need to pause or stop partway through?", "We understand circumstances change. Discuss this with the team during enrollment or anytime after you start. We can talk through options based on your situation and our schedule."],
+  ["Can siblings enroll together? Does that affect cost?", "Yes, siblings can enrol in the same or different learning tracks depending on their needs. Pricing is per student, but we can discuss any family packages or considerations during the enrollment conversation."],
+  ["How is my progress reported?", "You will receive term reports showing what you have learned, areas of strength, and where you need more support. Teachers can also reach out anytime if they notice something that needs attention during the term, not just at the end."],
+  ["Do I have to enroll in the full curriculum?", "No. You can choose a single subject if that is what you need. The full curriculum is not required to learn with BOA."],
 ];
 
 export default function FAQs({ standalone = false }: { standalone?: boolean }) {

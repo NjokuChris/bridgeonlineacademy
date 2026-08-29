@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Bridge Online Academy | Nigeria's Leading Online School",
   description:
-    "Live, teacher-led Nigerian curriculum lessons for Primary through Senior Secondary students.",
+    "Quality, live, teacher-led Nigerian curriculum lessons at any age. Follow the full curriculum or choose individual subjects like coding and video editing.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

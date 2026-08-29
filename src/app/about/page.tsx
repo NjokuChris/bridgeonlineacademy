@@ -15,7 +15,7 @@ export default function AboutPage() {
             A more connected way to learn.
           </h1>
           <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted">
-            Bridge Online Academy was founded to help children access a quality Nigerian education wherever they learn from.
+            Bridge Online Academy was founded to make quality Nigerian education accessible to anyone, at any age. Whether you are following the full curriculum or picking up a skill you need, we are here to teach with care.
           </p>
         </div>
       </section>
@@ -36,7 +36,7 @@ export default function AboutPage() {
                 Ms. Zika leads BOA with the belief that online learning can be both academically purposeful and genuinely personal. Every child deserves clear teaching, a dependable routine and an educator who pays attention to how they are progressing.
               </p>
               <p className="mt-5 leading-relaxed text-muted">
-                That belief shaped Bridge Online Academy: a focused learning space for Primary and Secondary students following the Nigerian curriculum.
+                That belief shaped Bridge Online Academy: a place where students at any level receive focused, rigorous instruction and genuine personal attention from qualified teachers.
               </p>
             </div>
           </AnimateIn>
