@@ -5,7 +5,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import { FaStar } from "react-icons/fa6";
 
 /**
- * Real, permissioned reviews go here — or this section is replaced by the
+ * Real, permissioned reviews go here, or this section is replaced by the
  * embed from whichever review platform the school actually uses. Left empty
  * because inventing reviews or a star rating would misrepresent the school.
  */

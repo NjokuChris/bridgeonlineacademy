@@ -6,8 +6,8 @@ interface ChecklistCardProps {
 
 /**
  * White card with a serif heading over hairline-divided rows, each ending in a
- * green tick. Appears twice in the reference — inside the coloured key-stage
- * panel and inside the navy "how we teach" panel — so it lives here.
+ * green tick. Appears twice in the reference: inside the coloured key-stage
+ * panel and inside the navy "how we teach" panel, so it lives here.
  */
 export default function ChecklistCard({
   heading,

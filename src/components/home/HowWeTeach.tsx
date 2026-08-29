@@ -56,7 +56,7 @@ export default function HowWeTeach() {
               <AnimateIn delay={0.14}>
                 <p className="mt-6 max-w-md text-base leading-relaxed text-white/90 lg:text-[1.0625rem]">
                   We pair experienced subject teachers with classroom technology
-                  chosen for one purpose — keeping students engaged, answering
+                  chosen for one purpose: keeping students engaged, answering
                   and progressing in every lesson.
                 </p>
               </AnimateIn>
@@ -70,7 +70,7 @@ export default function HowWeTeach() {
               </AnimateIn>
             </div>
 
-            {/* Right — white checklist card */}
+            {/* Right: white checklist card */}
             <AnimateIn delay={0.12} direction="left">
               <ChecklistCard
                 heading="What our live lessons look like"

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Hero() {
-  const animatedPhrase = "online classes,";
+  const animatedPhrase = "online learning.";
   const [typedPhrase, setTypedPhrase] = useState("");
 
   useEffect(() => {
@@ -55,18 +55,17 @@ export default function Hero() {
             Bridge Online Academy
           </p>
           <h1
-            aria-label="Quality online classes, from home to anywhere."
+            aria-label="Inspiring brighter futures through online learning."
             className="mt-5 font-display text-4xl font-semibold leading-tight text-navy-deep sm:text-5xl lg:text-7xl"
           >
-            Quality{" "}
+            Inspiring brighter futures through{" "}
             <span className="inline-block min-w-[14ch] whitespace-nowrap">
               {typedPhrase}
             </span>
-            from home to anywhere.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted lg:text-lg">
             Live, teacher-led Nigerian curriculum classes for Primary and
-            Secondary students—designed to give your child structure, support
+            Secondary students, designed to give your child structure, support
             and room to thrive online.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">

@@ -21,7 +21,7 @@ const PILLARS = [
   },
   {
     title: "Inclusive community",
-    desc: "Students are welcomed from day one through induction, school houses, buddy systems and clubs — online and, where offered, in person.",
+    desc: "Students are welcomed from day one through induction, school houses, buddy systems and clubs, online and where offered, in person.",
     href: "/student-community",
     cta: "Meet our community",
   },

@@ -7,7 +7,7 @@ import CheckCircle from "@/components/ui/CheckCircle";
 
 /**
  * Optional programme. If the school does not run one-to-one mentoring, remove
- * this section from the homepage rather than reframing it — nothing here should
+ * this section from the homepage rather than reframing it. Nothing here should
  * describe a service that is not actually offered.
  */
 const BENEFITS = [

@@ -29,7 +29,7 @@ const FEATURES = [
   {
     icon: PiUsersThreeBold,
     title: "Vibrant, social community",
-    desc: "Make friends through online clubs, assemblies, competitions and student leadership — a real sense of belonging, not just a login.",
+    desc: "Make friends through online clubs, assemblies, competitions and student leadership. A real sense of belonging, not just a login.",
     bg: "bg-[#FFF1E9]",
     iconBg: "bg-[#F97316]/15",
     iconColor: "text-[#EA580C]",

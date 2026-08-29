@@ -4,7 +4,7 @@ import { FiCheck } from "react-icons/fi";
 const CYCLE = ["#2B6CB0", "#2ECC71", "#F5811F", "#FFD100"] as const;
 
 interface CheckCircleProps {
-  /** Position in a grid — picks the accent colour by cycling through the four. */
+  /** Position in a grid: picks the accent colour by cycling through the four. */
   index?: number;
   className?: string;
 }
@@ -16,7 +16,7 @@ interface CheckCircleProps {
  */
 export default function CheckCircle({ index = 0, className = "" }: CheckCircleProps) {
   const colour = CYCLE[index % CYCLE.length];
-  // Yellow is too light for a white tick — use ink instead.
+  // Yellow is too light for a white tick, use ink instead.
   const tick = colour === "#FFD100" ? "#14231C" : "#FFFFFF";
 
   return (
