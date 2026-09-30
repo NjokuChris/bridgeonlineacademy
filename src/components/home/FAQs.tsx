@@ -1,54 +1,77 @@
 "use client";
+
 import { useState } from "react";
+import { FiPlus, FiMinus } from "react-icons/fi";
+import AnimateIn from "@/components/ui/AnimateIn";
 
-export const FAQS = [
-  ["What ages do you teach?", "BOA teaches learners of any age. You can follow the full Nigerian curriculum, or come to us for one subject or skill on its own, coding and video editing are two examples. There's no fixed age cutoff either way."],
-  ["Which curriculum do you follow?", "We offer two learning tracks: the full Nigerian curriculum for ongoing structured learning, or individual subjects and skills like coding, creative writing, or video editing on their own. You choose what fits your needs."],
-  ["Are classes live or recorded?", "Classes are live and teacher-led. If you miss a class, we can discuss recording availability during your enrollment conversation."],
-  ["How large are classes?", "We keep classes small so every student gets attention from the teacher. Size varies by subject, but we prioritize class quality over capacity."],
-  ["How much does it cost?", "Fees depend on what you choose, whether that's the full curriculum or a single subject. A BOA team member will share pricing details when you start the enrollment process."],
-  ["How do I get started?", "Fill out the enrollment form and a BOA team member will contact you directly. We'll discuss whether you want the full curriculum or a specific subject, and find the best fit for your needs."],
+export type FaqItem = [question: string, answer: string];
+
+export const ALL_FAQS: FaqItem[] = [
+  ["Who can join BOA?", "BOA is open to any learner, whatever their age. You can enrol in the full Nigerian curriculum programme or come to us for a single subject or skill. There is no age cutoff and no fixed stage requirement."],
+  ["What do you teach?", "BOA covers four focus areas: Academic Catch-up and Excellence, Entrance Exam Preparation, Reading Mastery, and Cultural Identity. Subjects include Maths, English, Science, Health Education, Yoruba, Hausa, Igbo, Arts, Creative Writing, Mental Maths, Physics, Chemistry, Biology, Computer Studies, Coding, French, Geography, Literature and Music."],
+  ["How do classes work?", "Classes are live and online. Sessions run in small groups three times a week and last 1 hour, 1 hour 30 minutes or 2 hours. Personalised one-to-one sessions are also available."],
+  ["How much does it cost?", "Fees depend on the programme you choose. A BOA team member will share the details when you start the enrolment process. You can also reach us on WhatsApp or by email if you prefer to ask first."],
+  ["How do I pay?", "Fees are paid online through the parent portal once you are enrolled. A receipt is available to download after each payment."],
+  ["How will I know how my child is doing?", "You will have access to the parent dashboard showing attendance, test scores and teacher comments. BOA also sends regular progress reports, and tutors contact parents directly when something needs attention."],
+  ["How do I speak to a teacher?", "Through the Contact page, on WhatsApp, or by requesting a meeting through the portal with Ms Zika or another tutor."],
+  ["How do I start?", "Fill in the enrolment form and a BOA team member will follow up with you directly, usually within one business day."],
+  ["Do you help with entrance exams?", "Yes. Entrance Exam Preparation is one of BOA's four focus areas. Tutors work through proven strategies and past questions."],
+  ["Can my child learn a local language with you?", "Yes. Cultural Identity is a dedicated focus area. Yoruba, Hausa and Igbo are currently offered."],
 ];
 
-export const PAGE_FAQS = [
-  ["What happens after I submit the enrollment form?", "A BOA team member will contact you within one business day via WhatsApp or email, depending on your preference. We will talk through whether you want the full curriculum or a specific subject, and find the best fit for your needs. The entire process from enrollment form to starting classes typically takes one to two weeks."],
-  ["What technology or equipment do I need?", "A reliable internet connection and a device to join live lessons (laptop, tablet, or phone). A headset helps with focus, but is not required. Some classes may use an online platform or document tool, which are free and require no special setup."],
-  ["What if I need to pause or stop partway through?", "We understand circumstances change. Discuss this with the team during enrollment or anytime after you start. We can talk through options based on your situation and our schedule."],
-  ["Can siblings enroll together? Does that affect cost?", "Yes, siblings can enrol in the same or different learning tracks depending on their needs. Pricing is per student, but we can discuss any family packages or considerations during the enrollment conversation."],
-  ["How is my progress reported?", "You will receive term reports showing what you have learned, areas of strength, and where you need more support. Teachers can also reach out anytime if they notice something that needs attention during the term, not just at the end."],
-  ["Do I have to enroll in the full curriculum?", "No. You can choose a single subject if that is what you need. The full curriculum is not required to learn with BOA."],
-];
+export const HOME_FAQS = ALL_FAQS.slice(0, 3);
 
 export default function FAQs({ standalone = false }: { standalone?: boolean }) {
-  const [open, setOpen] = useState(0);
-  const faqsToShow = standalone ? [...FAQS, ...PAGE_FAQS] : FAQS;
+  const [open, setOpen] = useState<number>(0);
+  const faqs = standalone ? ALL_FAQS : HOME_FAQS;
 
   return (
-    <section className="bg-white py-20 lg:py-28">
-      <div className="shell grid gap-10 lg:grid-cols-[20rem_1fr] lg:gap-16">
-        <div>
-          <p className="text-sm font-bold uppercase tracking-widest text-link">FAQs</p>
-          <h2 className="mt-5 font-display text-4xl font-semibold leading-tight text-ink">
-            {standalone ? "Your questions, answered." : "Questions families ask us."}
-          </h2>
-          <p className="mt-5 leading-relaxed text-muted">If you need more detail, we're happy to help.</p>
-        </div>
-        <ul>
-          {faqsToShow.map(([question, answer], index) => (
-            <li key={question} className="border-t border-border last:border-b">
+    <section className="bg-bg py-20 lg:py-28">
+      <div className="shell">
+
+        {/* Header — full width, left aligned */}
+        <AnimateIn>
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="eyebrow">FAQs</p>
+              <h2 className="heading-xl mt-3">
+                {standalone ? "Your questions, answered." : "Questions families ask us."}
+              </h2>
+            </div>
+            {!standalone && (
+              <a href="/faq" className="focus-ring text-sm font-bold text-link hover:underline">
+                See all questions →
+              </a>
+            )}
+          </div>
+        </AnimateIn>
+
+        {/* Accordion */}
+        <ul className="mt-10 rounded-xl border border-border bg-white overflow-hidden">
+          {faqs.map(([question, answer], index) => (
+            <li key={question} className="border-b border-border last:border-b-0">
               <button
                 type="button"
                 onClick={() => setOpen(open === index ? -1 : index)}
                 aria-expanded={open === index}
-                className="flex w-full items-center justify-between gap-6 py-5 text-left font-display text-xl font-semibold text-ink"
+                className="focus-ring flex w-full items-center justify-between gap-6 px-6 py-5 text-left transition-colors hover:bg-bg"
               >
-                <span>{question}</span>
-                <span className="font-sans text-link">{open === index ? "−" : "+"}</span>
+                <span className="heading-md pr-4">{question}</span>
+                <span className="shrink-0 text-link" aria-hidden="true">
+                  {open === index
+                    ? <FiMinus size={18} strokeWidth={2.5} />
+                    : <FiPlus size={18} strokeWidth={2.5} />}
+                </span>
               </button>
-              {open === index && <p className="pb-5 pr-8 leading-relaxed text-muted">{answer}</p>}
+              {open === index && (
+                <div className="bg-bg px-6 pb-6">
+                  <p className="body-base border-t border-border pt-4">{answer}</p>
+                </div>
+              )}
             </li>
           ))}
         </ul>
+
       </div>
     </section>
   );

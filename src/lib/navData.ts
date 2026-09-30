@@ -1,3 +1,5 @@
+import { siteConfig } from "@/config/site";
+
 export interface NavLink {
   label: string;
   href: string;
@@ -9,12 +11,13 @@ export const NAV_ITEMS: NavLink[] = [
   { label: "Programmes", href: "/programmes" },
   { label: "About", href: "/about" },
   { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const PRIMARY_CTA: NavLink = { label: "Start Learning", href: "/enrol" };
 export const TEACHER_CTA: NavLink = { label: "Become a Teacher", href: "/teach" };
 
-// Replace these placeholders with BOA's confirmed contact details before launch.
-export const WHATSAPP_NUMBER = "+2348000000000";
-export const PHONE_NUMBER = "+234 800 000 0000";
-export const EMAIL_ADDRESS = "admissions@bridgeonlineacademy.com";
+// All contact values come from siteConfig. Do not hardcode these here.
+export const WHATSAPP_NUMBER = siteConfig.contact.whatsapp.e164;
+export const PHONE_NUMBER = siteConfig.contact.phones[0].display;
+export const EMAIL_ADDRESS = siteConfig.contact.email;

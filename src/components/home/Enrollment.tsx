@@ -1,15 +1,20 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { WHATSAPP_NUMBER } from "@/lib/navData";
+import { whatsappLink } from "@/lib/contact";
 
-const field = "mt-2 w-full rounded border border-border bg-white px-4 py-3 outline-none placeholder:text-muted/70 focus:border-link focus:ring-2 focus:ring-link/20";
+const field =
+  "mt-2 w-full rounded border border-border bg-white px-4 py-3 text-sm outline-none placeholder:text-muted/60 focus:border-link focus:ring-2 focus:ring-link/20 transition-colors";
 
 type EnrollmentType = "student" | "teacher";
 
-export default function Enrollment({ type = "student" }: { type?: EnrollmentType }) {
+export default function Enrollment({
+  type = "student",
+}: {
+  type?: EnrollmentType;
+}) {
   const [submitted, setSubmitted] = useState(false);
-  const whatsapp = `https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, "")}`;
+  const whatsapp = whatsappLink();
 
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -25,18 +30,28 @@ export default function Enrollment({ type = "student" }: { type?: EnrollmentType
       <div className="shell max-w-4xl rounded-2xl bg-white p-7 sm:p-10 lg:p-14">
         {isStudent ? (
           <>
-            <p className="text-sm font-bold uppercase tracking-widest text-link">Start your enrollment</p>
-            <h2 className="mt-5 font-display text-4xl font-semibold text-ink">Begin your journey with BOA.</h2>
+            <p className="text-sm font-bold uppercase tracking-widest text-link">
+              Start your enrollment
+            </p>
+            <h2 className="mt-5 font-display text-4xl font-semibold text-ink">
+              Begin your journey with BOA.
+            </h2>
             <p className="mt-4 max-w-2xl leading-relaxed text-muted">
-              Share your details below and a BOA team member will guide you through the next steps.
+              Share your details below and a BOA team member will guide you
+              through the next steps.
             </p>
           </>
         ) : (
           <>
-            <p className="text-sm font-bold uppercase tracking-widest text-link">Apply to teach at BOA</p>
-            <h2 className="mt-5 font-display text-4xl font-semibold text-ink">Join our teaching community.</h2>
+            <p className="text-sm font-bold uppercase tracking-widest text-link">
+              Apply to teach at BOA
+            </p>
+            <h2 className="mt-5 font-display text-4xl font-semibold text-ink">
+              Join our teaching community.
+            </h2>
             <p className="mt-4 max-w-2xl leading-relaxed text-muted">
-              Tell us about your background and experience, and we'll explore the right fit with you.
+              Tell us about your background and experience, and we'll explore
+              the right fit with you.
             </p>
           </>
         )}
@@ -54,37 +69,73 @@ export default function Enrollment({ type = "student" }: { type?: EnrollmentType
             {/* Common fields */}
             <label className="text-sm font-semibold">
               Your name
-              <input required name="name" placeholder="e.g. Ada Okafor" className={field} />
+              <input
+                required
+                name="name"
+                placeholder="e.g. Ada Okafor"
+                className={field}
+              />
             </label>
             <label className="text-sm font-semibold">
               Email
-              <input required type="email" name="email" placeholder="e.g. ada@email.com" className={field} />
+              <input
+                required
+                type="email"
+                name="email"
+                placeholder="e.g. ada@email.com"
+                className={field}
+              />
             </label>
             <label className="text-sm font-semibold">
               WhatsApp number
-              <input required type="tel" name="whatsapp" placeholder="e.g. +234 800 000 0000" className={field} />
+              <input
+                required
+                type="tel"
+                name="whatsapp"
+                placeholder="e.g. +234 800 000 0000"
+                className={field}
+              />
             </label>
 
             {isStudent ? (
               <>
                 <label className="text-sm font-semibold">
                   Name
-                  <input required name="childName" placeholder="e.g. Chisom Okafor" className={field} />
+                  <input
+                    required
+                    name="childName"
+                    placeholder="e.g. Chisom Okafor"
+                    className={field}
+                  />
                 </label>
                 <label className="text-sm font-semibold">
                   Age (optional)
-                  <input type="number" min="5" name="childAge" placeholder="e.g. 10" className={field} />
+                  <input
+                    type="number"
+                    min="5"
+                    name="childAge"
+                    placeholder="e.g. 10"
+                    className={field}
+                  />
                 </label>
                 <label className="text-sm font-semibold">
                   Current class or learning level (optional)
-                  <input name="currentClass" placeholder="e.g. Primary 5, JS 2, or Beginner" className={field} />
+                  <input
+                    name="currentClass"
+                    placeholder="e.g. Primary 5, JS 2, or Beginner"
+                    className={field}
+                  />
                 </label>
                 <label className="text-sm font-semibold">
                   What would you like to learn?
                   <select name="learningTrack" className={field}>
                     <option value="">Select an option</option>
-                    <option value="full-curriculum">Full Nigerian curriculum</option>
-                    <option value="individual-subject">A single subject or skill</option>
+                    <option value="full-curriculum">
+                      Full Nigerian curriculum
+                    </option>
+                    <option value="individual-subject">
+                      A single subject or skill
+                    </option>
                     <option value="not-sure">Not sure</option>
                   </select>
                 </label>
@@ -101,22 +152,44 @@ export default function Enrollment({ type = "student" }: { type?: EnrollmentType
                 </label>
                 <label className="text-sm font-semibold sm:col-span-2">
                   Anything else we should know? (optional)
-                  <textarea name="message" rows={4} placeholder="Tell us about your learning goals or any questions." className={field} />
+                  <textarea
+                    name="message"
+                    rows={4}
+                    placeholder="Tell us about your learning goals or any questions."
+                    className={field}
+                  />
                 </label>
               </>
             ) : (
               <>
                 <label className="text-sm font-semibold">
                   Subject specialism
-                  <input required name="subjectSpecialism" placeholder="e.g. Mathematics, English Language" className={field} />
+                  <input
+                    required
+                    name="subjectSpecialism"
+                    placeholder="e.g. Mathematics, English Language"
+                    className={field}
+                  />
                 </label>
                 <label className="text-sm font-semibold">
                   Qualification (e.g., degree, field)
-                  <input required name="qualification" placeholder="e.g. B.Sc Mathematics" className={field} />
+                  <input
+                    required
+                    name="qualification"
+                    placeholder="e.g. B.Sc Mathematics"
+                    className={field}
+                  />
                 </label>
                 <label className="text-sm font-semibold">
                   Years of teaching experience
-                  <input required type="number" min="0" name="experience" placeholder="e.g. 5" className={field} />
+                  <input
+                    required
+                    type="number"
+                    min="0"
+                    name="experience"
+                    placeholder="e.g. 5"
+                    className={field}
+                  />
                 </label>
                 <label className="text-sm font-semibold">
                   Teaching setting
@@ -129,16 +202,27 @@ export default function Enrollment({ type = "student" }: { type?: EnrollmentType
                 </label>
                 <label className="text-sm font-semibold sm:col-span-2">
                   Tell us about your approach to teaching
-                  <textarea required name="teachingApproach" rows={4} placeholder="What matters to you as an educator?" className={field} />
+                  <textarea
+                    required
+                    name="teachingApproach"
+                    rows={4}
+                    placeholder="What matters to you as an educator?"
+                    className={field}
+                  />
                 </label>
               </>
             )}
 
             <div className="sm:col-span-2 flex flex-wrap items-center gap-5">
-              <button className="rounded bg-yellow px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-ink hover:bg-yellow-hover">
-                {isStudent ? "Start enrollment" : "Submit application"}
+              <button className="rounded bg-yellow px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-ink transition-colors hover:bg-yellow-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2">
+                {isStudent ? "Start enrolment" : "Submit application"}
               </button>
-              <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="font-bold text-link hover:underline">
+              <a
+                href={whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-link hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-link"
+              >
                 Prefer WhatsApp? Message us →
               </a>
             </div>

@@ -1,97 +1,61 @@
 "use client";
 
-import {
-  PiBroadcastBold,
-  PiGraduationCapBold,
-  PiUsersThreeBold,
-  PiClockBold,
-} from "react-icons/pi";
+/**
+ * WhyUs — split layout. Header left, feature list right.
+ * All token values: text-ink, text-muted, no hardcoded hex.
+ * Icons: single consistent set (react-icons/fi, thin strokes).
+ * Hover: subtle bg tint only — no transforms.
+ */
+import { FiUser, FiUsers, FiHeart, FiMessageSquare } from "react-icons/fi";
 import AnimateIn from "@/components/ui/AnimateIn";
 import SectionLabel from "@/components/ui/SectionLabel";
+import { siteConfig } from "@/config/site";
 
-const FEATURES = [
-  {
-    icon: PiBroadcastBold,
-    title: "Live, teacher-led lessons",
-    desc: "Join real-time, interactive lessons with subject-specialist teachers every teaching day. Missed a class? Recordings are available to catch up on.",
-    bg: "bg-[#EAF2FF]",
-    iconBg: "bg-[#3B82F6]/15",
-    iconColor: "text-[#2563EB]",
-  },
-  {
-    icon: PiGraduationCapBold,
-    title: "Qualified expert teachers",
-    desc: "Learn from degree-qualified, subject-specialist teachers with experience in both classroom and online education.",
-    bg: "bg-[#F1EEFF]",
-    iconBg: "bg-[#8B5CF6]/15",
-    iconColor: "text-[#7C3AED]",
-  },
-  {
-    icon: PiUsersThreeBold,
-    title: "Vibrant, social community",
-    desc: "Make friends through online clubs, assemblies, competitions and student leadership. A real sense of belonging, not just a login.",
-    bg: "bg-[#FFF1E9]",
-    iconBg: "bg-[#F97316]/15",
-    iconColor: "text-[#EA580C]",
-  },
-  {
-    icon: PiClockBold,
-    title: "Flexible learning options",
-    desc: "Learn from Lagos, Abuja, Port Harcourt or abroad, and fit school around your family's routine and time zone.",
-    bg: "bg-[#EAFBF1]",
-    iconBg: "bg-[#22C55E]/15",
-    iconColor: "text-[#16A34A]",
-  },
-];
+const icons = [FiUser, FiUsers, FiHeart, FiMessageSquare];
 
 export default function WhyUs() {
   return (
     <section className="bg-bg py-20 lg:py-28">
-      <div className="shell">
-        {/* Intro */}
-        <div className="mx-auto max-w-2xl text-center">
+      <div className="shell grid gap-14 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
+
+        {/* Sticky left column */}
+        <div className="lg:pt-1">
           <AnimateIn>
-            <SectionLabel>What makes us different?</SectionLabel>
+            <SectionLabel>What makes us different</SectionLabel>
           </AnimateIn>
-          <AnimateIn delay={0.08}>
-            <h2 className="mt-7 font-display text-[2rem] font-semibold leading-tight text-ink lg:text-[2.75rem]">
-              Why families choose Bridge Online Academy
+          <AnimateIn delay={0.07}>
+            <h2 className="heading-xl mt-4">
+              Why families choose BOA.
             </h2>
           </AnimateIn>
-          <AnimateIn delay={0.14}>
-            <p className="mt-6 text-base leading-relaxed text-muted lg:text-[1.0625rem]">
-              We hold to the standards of a serious school and offer an
-              environment where every student is known by name. Our students
-              learn flexibly, and shape a schedule that fits their family life.
+          <AnimateIn delay={0.13}>
+            <p className="body-lg mt-4">
+              BOA treats each child as family. The goal is learners who are
+              ready for exams, ready for life and proud of who they are.
             </p>
           </AnimateIn>
         </div>
 
-        {/* Feature cards */}
-        <div className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-24 lg:gap-7">
-          {FEATURES.map((feat, i) => {
-            const Icon = feat.icon;
+        {/* Right: feature rows — not a grid of cards */}
+        <div className="space-y-4">
+          {siteConfig.differentiators.map((feat, i) => {
+            const Icon = icons[i % icons.length];
             return (
-              <AnimateIn key={feat.title} delay={i * 0.08}>
-                <div
-                  className={`group h-full rounded-2xl ${feat.bg} p-6 transition-transform duration-300 hover:-translate-y-1 lg:p-7`}
-                >
-                  <div
-                    className={`flex h-12 w-12 items-center justify-center rounded-xl ${feat.iconBg}`}
-                  >
-                    <Icon className={`h-6 w-6 ${feat.iconColor}`} />
+              <AnimateIn key={feat.id} delay={i * 0.07}>
+                <div className="flex gap-5 rounded-xl border border-border bg-white p-5 transition-colors hover:border-link/30 hover:bg-pill/20 lg:p-6">
+                  <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-pill text-pill-ink">
+                    <Icon size={18} aria-hidden="true" strokeWidth={2} />
                   </div>
-                  <h3 className="mt-5 font-display text-lg font-semibold leading-snug text-[#0F172A] lg:text-xl">
-                    {feat.title}
-                  </h3>
-                  <p className="mt-2.5 text-[0.9375rem] leading-relaxed text-[#475569] lg:text-base">
-                    {feat.desc}
-                  </p>
+                  <div>
+                    <h3 className="heading-md">{feat.title}</h3>
+                    <p className="body-base mt-1">{feat.description}</p>
+                  </div>
                 </div>
               </AnimateIn>
             );
           })}
         </div>
+
       </div>
     </section>
   );

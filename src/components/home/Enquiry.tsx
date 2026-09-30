@@ -1,13 +1,13 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { WHATSAPP_NUMBER } from "@/lib/navData";
+import { whatsappLink } from "@/lib/contact";
 
 const field = "mt-2 w-full rounded border border-border bg-white px-4 py-3 outline-none placeholder:text-muted/70 focus:border-link focus:ring-2 focus:ring-link/20";
 
 export default function Enquiry() {
   const [submitted, setSubmitted] = useState(false);
-  const whatsapp = `https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, "")}`;
+  const whatsapp = whatsappLink();
 
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
