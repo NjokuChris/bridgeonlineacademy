@@ -17,7 +17,7 @@ const areaAccents = [
 
 export default function FocusAreas() {
   return (
-    <section className="bg-bg py-20 lg:py-28">
+    <section className="bg-[#F9FAFB] py-20 lg:py-28">
       <div className="shell">
 
         {/* Left-aligned header — different from Hero's centred layout */}
@@ -44,7 +44,7 @@ export default function FocusAreas() {
             const accent = areaAccents[i % areaAccents.length];
             return (
               <AnimateIn key={area.id} delay={i * 0.07}>
-                <div className={`rounded-lg border border-border bg-white p-6 ${accent.border} lg:p-7`}>
+                <div className={` border border-gray-200 border-1 rounded-lg  bg-white p-6  lg:p-7`}>
                   <div className={`inline-flex h-8 w-8 items-center justify-center rounded-md ${accent.num}`}>
                     <span className="font-display text-sm font-semibold text-white">
                       {i + 1}

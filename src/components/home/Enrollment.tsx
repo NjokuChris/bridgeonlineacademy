@@ -50,7 +50,7 @@ export default function Enrollment({
               Join our teaching community.
             </h2>
             <p className="mt-4 max-w-2xl leading-relaxed text-muted">
-              Tell us about your background and experience, and we'll explore
+              Tell us about your background and experience, and we&apos;ll explore
               the right fit with you.
             </p>
           </>

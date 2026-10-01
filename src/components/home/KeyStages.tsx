@@ -1,5 +1,5 @@
 /**
- * KeyStages — two-track split. Full-width with strong contrast between cards.
+ * KeyStages: two-track split. Full-width with strong contrast between cards.
  * Layout: horizontal split cards, not stacked grid.
  * The two cards sit side by side and fill the section width, no shell gutters.
  */
@@ -19,7 +19,7 @@ const tracks = [
   {
     eyebrow: "Pick what you need",
     title: "Individual Subjects",
-    body: "One subject, one skill — without the full curriculum. Coding, video editing, exam preparation, creative writing, or any subject taught live by a specialist.",
+    body: "One subject, one skill, without the full curriculum. Coding, video editing, exam preparation, creative writing, or any subject taught live by a specialist.",
     cta: "See all subjects",
     bg: "bg-bg",
     textColour: "text-ink",
@@ -46,13 +46,22 @@ export default function KeyStages() {
                 <p className={`text-xs font-bold uppercase tracking-widest ${t.bg === "bg-bg" ? "text-link" : "text-yellow"}`}>
                   {t.eyebrow}
                 </p>
-                <h3 className={`heading-lg mt-4 ${t.textColour}`}>{t.title}</h3>
-                <p className={`body-base mt-4 ${t.bg === "bg-bg" ? "text-muted" : "text-white/85"}`}>
+                <h3
+                  className={`heading-lg mt-4 ${t.textColour}`}
+                  style={{ color: t.bg === "bg-bg" ? "var(--color-ink)" : "#ffffff" }}
+                >
+                  {t.title}
+                </h3>
+                <p
+                  className={`body-base mt-4 ${t.bg === "bg-bg" ? "text-muted" : "text-white"}`}
+                  style={{ color: t.bg === "bg-bg" ? "var(--color-muted)" : "rgba(255, 255, 255, 0.95)" }}
+                >
                   {t.body}
                 </p>
                 <Link
                   href="/programmes"
                   className={`focus-ring mt-8 inline-flex h-11 items-center rounded-lg px-6 text-sm font-bold uppercase tracking-wide transition-colors ${t.ctaClass}`}
+                  style={{ color: t.bg === "bg-bg" ? undefined : "#ffffff" }}
                 >
                   {t.cta}
                 </Link>

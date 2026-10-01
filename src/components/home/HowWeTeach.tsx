@@ -43,10 +43,10 @@ export default function HowWeTeach() {
           </svg>
 
           <div className="relative grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-            {/* Left — copy */}
+            {/* Left: copy */}
             <div>
               <AnimateIn>
-                <SectionLabel>How we teach</SectionLabel>
+                <SectionLabel tone="light">How we teach</SectionLabel>
               </AnimateIn>
               <AnimateIn delay={0.08}>
                 <h2 className="mt-7 font-display text-[2rem] font-semibold leading-tight text-white lg:text-[2.75rem]">
