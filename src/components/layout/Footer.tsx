@@ -1,17 +1,16 @@
 import Link from "next/link";
-import Image from "next/image";
 import { FaWhatsapp, FaTiktok, FaInstagram } from "react-icons/fa6";
 import { FiPhone, FiMail } from "react-icons/fi";
 import { siteConfig } from "@/config/site";
 import { whatsappLink, telLink, mailtoLink } from "@/lib/contact";
+import Logo from "@/components/ui/Logo";
 
 const exploreLinks: [string, string][] = [
   ["Home", "/"],
   ["Programmes", "/programmes"],
   ["Team & Tutors", "/team"],
   ["About BOA", "/about"],
-  ["Frequently Asked Questions", "/faq"],
-  ["Contact Us", "/contact"],
+  ["Contact & FAQ", "/contact"],
 ];
 
 const admissionsLinks: [string, string][] = [
@@ -35,15 +34,7 @@ export default function Footer() {
       <div className="shell grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8 lg:py-20">
         {/* Brand column */}
         <div className="lg:col-span-4">
-          <Link href="/" aria-label="Bridge Online Academy home" className="inline-block">
-            <Image
-              src="/boa-logo.png"
-              alt="Bridge Online Academy"
-              width={160}
-              height={70}
-              className="h-auto w-20 rounded-xl"
-            />
-          </Link>
+          <Logo size="lg" />
           <p className="mt-4 text-base font-semibold text-ink">
             {siteConfig.slogan}
           </p>

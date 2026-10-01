@@ -1,18 +1,34 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import SiteLayout from "@/components/layout/SiteLayout";
 import AnimateIn from "@/components/ui/AnimateIn";
 import SectionLabel from "@/components/ui/SectionLabel";
 import RegisterCTA from "@/components/home/RegisterCTA";
+import FAQs from "@/components/home/FAQs";
+import { ALL_FAQS } from "@/data/faqs";
 import { FaWhatsapp, FaTiktok, FaInstagram } from "react-icons/fa6";
-import { FiPhone, FiMail } from "react-icons/fi";
+import { FiPhone, FiMail, FiArrowDown } from "react-icons/fi";
 import { siteConfig } from "@/config/site";
 import { whatsappLink, telLink, mailtoLink } from "@/lib/contact";
 import ContactForm from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact and FAQ",
   description:
-    "Get in touch with Bridge Online Academy by WhatsApp, phone or email. You can also use the contact form or request a meeting with Ms Zika or another tutor.",
+    "Get in touch with Bridge Online Academy by WhatsApp, phone or email, or browse instant answers to common questions about our programmes, fees, and enrolment.",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: ALL_FAQS.map(([question, answer]) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: answer,
+    },
+  })),
 };
 
 export default function ContactPage() {
@@ -21,19 +37,50 @@ export default function ContactPage() {
 
   return (
     <SiteLayout>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <Script
+        id="org-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": ["Organization", "EducationalOrganization"],
+            name: siteConfig.name,
+            url: siteConfig.url,
+            email: siteConfig.contact.email,
+            telephone: siteConfig.contact.phones.map((p) => p.e164),
+            sameAs: [siteConfig.social.tiktok, siteConfig.social.instagram],
+          }),
+        }}
+      />
+
       {/* Hero */}
       <section className="bg-bg py-20 lg:py-28">
         <div className="shell max-w-4xl">
           <p className="text-sm font-bold uppercase tracking-widest text-link">
-            Contact
+            Contact &amp; FAQ
           </p>
           <h1 className="mt-5 font-display text-5xl font-semibold leading-tight text-ink lg:text-6xl">
-            Get in touch with BOA.
+            We are here to help.
           </h1>
           <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted">
-            Whether you have a question about enrolment, want to speak with a
-            tutor or just need more information, we are happy to help.
+            Whether you have a question about enrolment, want to speak with Ms Zika
+            or another tutor, or are looking for quick answers to common questions,
+            we are ready to assist you.
           </p>
+          <div className="mt-6">
+            <a
+              href="#faq"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-link hover:underline"
+            >
+              <span>Looking for quick answers? Browse our FAQs</span>
+              <FiArrowDown size={15} aria-hidden="true" />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -47,13 +94,13 @@ export default function ContactPage() {
             </AnimateIn>
             <AnimateIn delay={0.08}>
               <h2 className="mt-5 font-display text-3xl font-semibold text-ink">
-                We are here for you.
+                Speak with our team.
               </h2>
             </AnimateIn>
             <AnimateIn delay={0.14}>
               <p className="mt-4 leading-relaxed text-muted">
-                WhatsApp is usually the quickest way to reach us. You can also
-                call, email or message on social media.
+                WhatsApp is usually the fastest way to get a response. You can also
+                call, email, or send us a message through the form.
               </p>
             </AnimateIn>
 
@@ -149,6 +196,11 @@ export default function ContactPage() {
           </AnimateIn>
         </div>
       </section>
+
+      {/* Embedded FAQ Section with anchor */}
+      <div id="faq" className="scroll-mt-12 border-t border-border">
+        <FAQs standalone />
+      </div>
 
       <RegisterCTA />
     </SiteLayout>

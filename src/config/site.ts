@@ -48,15 +48,15 @@ export const siteConfig = {
   focusAreas: [
     {
       id: "academic",
-      title: "Academic Catch-up and Excellence",
+      title: "Academic Catch-up & Excellence",
       description:
-        "Core subjects taught carefully, with attention to gaps in learning. Whether a child needs to catch up or push ahead, lessons are matched to where they actually are.",
+        "Covering core subjects and filling learning gaps. Whether a child needs to catch up or push ahead, lessons are matched to where they actually are.",
     },
     {
       id: "entrance",
       title: "Entrance Exam Preparation",
       description:
-        "Proven strategies and past questions to help children prepare for entrance exams with confidence. Tutors work through the specific papers and techniques that make a real difference.",
+        "Proven strategies and past questions to help children pass with confidence. Tutors work through the specific papers and techniques that make a real difference.",
     },
     {
       id: "reading",
@@ -77,25 +77,25 @@ export const siteConfig = {
       id: "personalised",
       title: "Personalised Learning",
       description:
-        "Every lesson is matched to the child's level and goals. There is no one-size-fits-all approach here.",
+        "We don't use a one-size-fits-all approach. Every lesson is tailored to your child's level and goals.",
     },
     {
       id: "team",
-      title: "From One Teacher to a Team",
+      title: "From 1 Teacher to a Team",
       description:
-        "BOA started with Ms Zika and grew deliberately. Each new tutor joined to give children more support, more feedback and more opportunities.",
+        "We started small with Ms Zika and have intentionally grown our teaching team so every child gets more attention and support.",
     },
     {
       id: "whole-child",
       title: "Whole-Child Focus",
       description:
-        "Confidence, communication and character are part of what BOA builds. Pride in language and culture is taken seriously alongside academic progress.",
+        "Beyond grades, we work on confidence, communication and character, including pride in language and culture.",
     },
     {
       id: "partnership",
       title: "Parent Partnership",
       description:
-        "Regular updates, progress reports and an open-door policy. Parents stay informed and involved. The child's growth is a shared goal.",
+        "We keep you involved with regular updates, progress reports and an open-door policy. Your child's growth is our shared mission.",
     },
   ] as const,
 } as const;

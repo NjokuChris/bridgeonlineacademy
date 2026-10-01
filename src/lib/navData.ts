@@ -11,8 +11,7 @@ export const NAV_ITEMS: NavLink[] = [
   { label: "Programmes", href: "/programmes" },
   { label: "About", href: "/about" },
   { label: "Team & Tutors", href: "/team" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact & FAQ", href: "/contact" },
 ];
 
 export const PRIMARY_CTA: NavLink = { label: "Start Learning", href: "/enrol" };

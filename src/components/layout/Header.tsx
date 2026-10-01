@@ -8,30 +8,12 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 import { NAV_ITEMS, PRIMARY_CTA, TEACHER_CTA } from "@/lib/navData";
 import { whatsappLink } from "@/lib/contact";
+import Logo from "@/components/ui/Logo";
 
 const SUBJECT_LINKS = [
   "Maths", "English", "Science", "Health Education",
   "Languages", "Creative Arts", "Coding", "and more",
 ];
-
-function Logo() {
-  return (
-    <Link
-      href="/"
-      className="flex shrink-0 items-center rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-link focus-visible:ring-offset-2"
-      aria-label="Bridge Online Academy home"
-    >
-      <Image
-        src="/boa-logo.png"
-        alt="Bridge Online Academy"
-        width={190}
-        height={56}
-        priority
-        className="h-auto w-16 rounded-xl lg:w-[4.875rem]"
-      />
-    </Link>
-  );
-}
 
 function ProgrammesMenu() {
   return (
@@ -87,7 +69,7 @@ function MobileDrawer({ onClose }: { onClose: () => void }) {
       aria-label="Site menu"
     >
       <div className="flex items-center justify-between border-b border-border px-5 py-4">
-        <Logo />
+        <Logo onClick={onClose} />
         <button
           type="button"
           onClick={onClose}
@@ -173,7 +155,7 @@ export default function Header() {
         }`}
       >
         <div className="shell flex items-center justify-between gap-4 py-3.5">
-          <Logo />
+          <Logo priority />
 
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
             {NAV_ITEMS.map((item) =>
