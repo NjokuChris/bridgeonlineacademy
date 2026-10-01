@@ -7,8 +7,30 @@ import Link from "next/link";
  */
 export default function RegisterCTA() {
   return (
-    <section className="bg-navy py-20 lg:py-28 text-white">
-      <div className="shell">
+    <section className="relative overflow-hidden bg-navy py-20 lg:py-28 text-white">
+      <svg
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.07]"
+      >
+        <defs>
+          <pattern
+            id="register-cta-grid"
+            width="72"
+            height="72"
+            patternUnits="userSpaceOnUse"
+            patternTransform="rotate(30)"
+          >
+            <path
+              d="M0 0 L72 0 L36 62 Z"
+              fill="none"
+              stroke="white"
+              strokeWidth="1"
+            />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#register-cta-grid)" />
+      </svg>
+      <div className="shell relative z-10">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-bold uppercase tracking-widest text-yellow">
             Your child&apos;s next step

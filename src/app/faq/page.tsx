@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import SiteLayout from "@/components/layout/SiteLayout";
-import FAQs, { ALL_FAQS } from "@/components/home/FAQs";
+import FAQs from "@/components/home/FAQs";
+import { ALL_FAQS } from "@/data/faqs";
 import RegisterCTA from "@/components/home/RegisterCTA";
 import { siteConfig } from "@/config/site";
 
