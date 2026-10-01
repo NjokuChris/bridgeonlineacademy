@@ -56,7 +56,7 @@ export default function ClassFormat() {
         <div className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 lg:grid-cols-4">
           {stats.map((s, i) => (
             <AnimateIn key={s.label} delay={i * 0.07}>
-              <div className="flex flex-col items-center bg-navy px-6 py-8 text-center">
+              <div className="flex flex-col items-center h-full bg-navy px-6 py-8 text-center">
                 <p className="font-display text-5xl font-semibold text-yellow lg:text-6xl">
                   {s.value}
                 </p>
