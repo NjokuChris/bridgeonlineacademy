@@ -276,13 +276,13 @@ export default function ProgrammesPage() {
             Programmes
           </p>
           <h1 className="mt-5 font-display text-5xl font-semibold leading-tight text-ink lg:text-6xl">
-            Learn your way.
+            Practical, personalised and exam-ready.
           </h1>
           <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted">
-            BOA offers two ways to learn: follow the full Nigerian curriculum
-            with structured, ongoing teaching, or pick up individual subjects
-            and skills on their own. Both are taught live in small groups by
-            experienced tutors.
+            Our robust curriculum is designed to be practical, personalised, and exam-ready.
+            Follow the full Nigerian curriculum with structured, ongoing teaching, or pick
+            up individual subjects and skills on their own, all taught live in small groups
+            by experienced tutors.
           </p>
         </div>
       </section>
@@ -427,9 +427,8 @@ export default function ProgrammesPage() {
             </p>
           </AnimateIn>
           <AnimateIn delay={0.2}>
-            <p className="mt-3 max-w-3xl text-sm text-muted">
-              Dialects currently offered: Yoruba, Hausa and Igbo. (List to be
-              confirmed with BOA.)
+            <p className="mt-3 max-w-3xl text-sm font-medium text-muted">
+              Dialects currently offered: Yoruba, Hausa and Igbo.
             </p>
           </AnimateIn>
           <SubjectList subjects={culturalSubjects} bg="bg-bg" />

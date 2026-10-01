@@ -11,22 +11,22 @@ export const metadata: Metadata = {
     "Bridge Online Academy started with one teacher, Ms Zika, and has grown into a team. Learn our story, our vision and how we work with every family.",
 };
 
-const beliefs = [
+const differentiators = [
   {
-    title: "Personal attention",
-    body: "Small groups and consistent tutors mean every learner is known by name. Tutors notice when something changes and respond to it.",
+    title: "Personalized Learning",
+    body: "We don't use a one-size-fits-all approach. Every lesson is tailored to your child's level and goals.",
   },
   {
-    title: "Whole-child focus",
-    body: "Confidence, communication and character are built alongside academic progress. Pride in language and culture is part of the programme, not an afterthought.",
+    title: "From 1 Teacher to a Team",
+    body: "We started small with Ms Zika and have intentionally grown our teaching team so every child gets more attention and support.",
   },
   {
-    title: "Parent partnership",
-    body: "Regular updates, progress reports and an open-door policy keep families informed and involved. The child's growth is a shared goal.",
+    title: "Whole-Child Focus",
+    body: "Beyond grades, we work on confidence, communication, and character, including pride in language and culture.",
   },
   {
-    title: "No child left behind",
-    body: "Sessions are small. Tutors are trained to meet learners where they are. If a child is struggling, the team acts early rather than waiting for a problem to grow.",
+    title: "Parent Partnership",
+    body: "We keep you involved with regular updates, progress reports, and an open-door policy. Your child's growth is our shared mission.",
   },
 ];
 
@@ -43,13 +43,15 @@ export default function AboutPage() {
             A learning community built around each child.
           </h1>
           <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted">
-            {siteConfig.name} is dedicated to helping every child grow with
-            confidence, academically, personally and culturally.
+            BOA is a learning community dedicated to helping every child grow with
+            confidence: academically, personally, and culturally. We believe every child
+            deserves quality teaching, personal attention, and the tools to thrive both
+            in school and in life.
           </p>
         </div>
       </section>
 
-      {/* Our story: Ms Zika */}
+      {/* Our story: Ms Zika & The Teaching Team */}
       <section className="bg-white py-20 lg:py-28">
         <div className="shell grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
           <AnimateIn direction="right">
@@ -61,33 +63,30 @@ export default function AboutPage() {
           </AnimateIn>
           <div>
             <AnimateIn>
-              <SectionLabel>Our story</SectionLabel>
+              <SectionLabel>Our Teachers</SectionLabel>
             </AnimateIn>
             <AnimateIn delay={0.08}>
               <h2 className="mt-5 font-display text-4xl font-semibold text-ink">
-                It started with one teacher.
+                From one teacher to a dedicated team.
               </h2>
             </AnimateIn>
             <AnimateIn delay={0.14}>
               <p className="mt-6 leading-relaxed text-muted">
-                Ms Zika started Bridge Online Academy with a simple belief:
-                every child deserves quality teaching, personal attention and
-                the tools to thrive both in school and in life.
+                BOA started with <strong className="text-ink">Ms Zika</strong>, whose passion and
+                dedication laid the foundation of our school.
               </p>
             </AnimateIn>
             <AnimateIn delay={0.2}>
               <p className="mt-5 leading-relaxed text-muted">
-                She built her lessons around her learners, adapting to their
-                pace, noticing when they were lost and celebrating when they
-                clicked. Word spread, and more families came.
+                Today, we have grown. BOA now has a <strong className="text-ink">team of experienced, caring tutors</strong> who
+                work alongside Ms Zika to give every child more support, more feedback, and more
+                opportunities to shine.
               </p>
             </AnimateIn>
             <AnimateIn delay={0.26}>
               <p className="mt-5 leading-relaxed text-muted">
-                As BOA grew, Ms Zika made a deliberate choice: bring in
-                experienced, caring tutors who shared her values, so that every
-                child could have the same quality of attention she gave her
-                first students.
+                Our teachers are trained to meet children where they are, explain concepts clearly,
+                and make learning engaging, whether online or in class.
               </p>
             </AnimateIn>
           </div>
@@ -98,103 +97,72 @@ export default function AboutPage() {
       <section className="bg-bg py-20 lg:py-28">
         <div className="shell max-w-3xl">
           <AnimateIn>
-            <SectionLabel>Our vision</SectionLabel>
+            <SectionLabel>Our Vision</SectionLabel>
           </AnimateIn>
           <AnimateIn delay={0.08}>
             <h2 className="mt-7 font-display text-[2rem] font-semibold leading-tight text-ink lg:text-[2.75rem]">
-              Raising a generation ready for school, for life and for each
-              other.
+              Raising a generation of confident, capable, and compassionate learners.
             </h2>
           </AnimateIn>
           <AnimateIn delay={0.14}>
-            <p className="mt-6 leading-relaxed text-muted">
-              BOA&apos;s vision is to raise a generation of confident, capable and
-              compassionate learners who excel in academics, speak with pride
-              and serve others. BOA builds foundations for school success, for
-              life skills and for community leadership.
+            <p className="mt-6 text-lg leading-relaxed text-muted">
+              To raise a generation of confident, capable, and compassionate learners who excel
+              in academics, speak with pride, and serve others.
+            </p>
+          </AnimateIn>
+          <AnimateIn delay={0.2}>
+            <p className="mt-4 leading-relaxed text-muted">
+              At BOA, we don&apos;t just teach subjects. We build foundations for school success,
+              for life skills, and for community leadership.
             </p>
           </AnimateIn>
         </div>
       </section>
 
-      {/* From one teacher to a team */}
+      {/* What Makes BOA Different? */}
       <section className="bg-white py-20 lg:py-28">
-        <div className="shell max-w-4xl">
-          <AnimateIn>
-            <SectionLabel>From one teacher to a team</SectionLabel>
-          </AnimateIn>
-          <AnimateIn delay={0.08}>
-            <h2 className="mt-7 font-display text-[2rem] font-semibold leading-tight text-ink lg:text-[2.75rem]">
-              What growing the team means for each child.
-            </h2>
-          </AnimateIn>
-          <div className="mt-10 space-y-8 lg:mt-14">
-            <AnimateIn delay={0.1}>
-              <div>
-                <h3 className="font-display text-xl font-semibold text-ink">
-                  More support, more feedback, more opportunities.
-                </h3>
-                <p className="mt-3 leading-relaxed text-muted">
-                  When Ms Zika taught alone, she could only give so much time to
-                  each child. By building a team, BOA can offer more subjects,
-                  smaller groups and more personal attention across the board.
-                </p>
-              </div>
-            </AnimateIn>
-            <AnimateIn delay={0.16}>
-              <div>
-                <h3 className="font-display text-xl font-semibold text-ink">
-                  Tutors trained to teach, not just to know.
-                </h3>
-                <p className="mt-3 leading-relaxed text-muted">
-                  Every BOA tutor is trained to meet children where they are,
-                  explain concepts clearly and make learning engaging. Subject
-                  knowledge matters, but so does the ability to teach it well,
-                  online, to a child who might be distracted or confused.
-                </p>
-              </div>
-            </AnimateIn>
-            <AnimateIn delay={0.22}>
-              <div>
-                <h3 className="font-display text-xl font-semibold text-ink">
-                  Ms Zika still leads.
-                </h3>
-                <p className="mt-3 leading-relaxed text-muted">
-                  The team works alongside Ms Zika. Her standards and her
-                  approach shape everything the school does. Families can still
-                  speak with her directly.
-                </p>
-              </div>
-            </AnimateIn>
-          </div>
-        </div>
-      </section>
-
-      {/* What we believe */}
-      <section className="bg-bg py-20 lg:py-28">
         <div className="shell">
           <div className="mx-auto max-w-3xl text-center">
             <AnimateIn>
-              <SectionLabel>What we believe</SectionLabel>
+              <SectionLabel>What Makes BOA Different?</SectionLabel>
             </AnimateIn>
             <AnimateIn delay={0.08}>
               <h2 className="mt-7 font-display text-[2rem] font-semibold leading-tight text-ink lg:text-[2.75rem]">
-                The values behind every lesson.
+                Four reasons families choose BOA.
               </h2>
             </AnimateIn>
           </div>
           <div className="mx-auto mt-14 max-w-3xl space-y-5 lg:mt-20">
-            {beliefs.map((b, i) => (
-              <AnimateIn key={b.title} delay={0.08 + i * 0.06}>
-                <div className="rounded-xl border border-border bg-white p-6 lg:p-8">
-                  <h3 className="font-display text-lg font-semibold text-ink">
-                    {b.title}
-                  </h3>
-                  <p className="mt-2 leading-relaxed text-muted">{b.body}</p>
+            {differentiators.map((d, i) => (
+              <AnimateIn key={d.title} delay={0.08 + i * 0.06}>
+                <div className="rounded-xl border border-border bg-bg p-6 lg:p-8">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-navy text-xs font-bold text-yellow">
+                      {i + 1}
+                    </span>
+                    <h3 className="font-display text-lg font-semibold text-ink">
+                      {d.title}
+                    </h3>
+                  </div>
+                  <p className="mt-3 leading-relaxed text-muted">{d.body}</p>
                 </div>
               </AnimateIn>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Signature Client Quote: Family Callout */}
+      <section className="border-t border-border bg-bg py-16 lg:py-24">
+        <div className="shell max-w-3xl text-center">
+          <AnimateIn>
+            <p className="font-display text-2xl font-semibold text-ink sm:text-3xl lg:text-4xl">
+              &ldquo;At BOA, your child isn&apos;t just another student. They&apos;re family.&rdquo;
+            </p>
+            <p className="mt-5 text-lg leading-relaxed text-muted">
+              And together, we&apos;re building learners who are ready for exams, ready for life, and proud of who they are.
+            </p>
+          </AnimateIn>
         </div>
       </section>
 

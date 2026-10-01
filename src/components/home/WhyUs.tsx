@@ -30,8 +30,9 @@ export default function WhyUs() {
           </AnimateIn>
           <AnimateIn delay={0.13}>
             <p className="body-lg mt-4">
-              BOA treats each child as family. The goal is learners who are
-              ready for exams, ready for life and proud of who they are.
+              At BOA, your child isn&apos;t just another student. They&apos;re family.
+              Together, we&apos;re building learners who are ready for exams, ready for life,
+              and proud of who they are.
             </p>
           </AnimateIn>
         </div>

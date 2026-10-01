@@ -9,9 +9,9 @@ import SectionLabel from "@/components/ui/SectionLabel";
 
 const points = [
   "Tutors trained to meet children where they are",
-  "Clear explanations, not just correct answers",
-  "Regular written feedback to parents",
-  "Ms Zika still leads and is still reachable",
+  "Explain concepts clearly and make learning engaging",
+  "Regular updates, progress reports and open communication",
+  "Ms Zika still leads and works alongside our tutors",
 ];
 
 export default function TeachingAndSupport() {
@@ -45,9 +45,9 @@ export default function TeachingAndSupport() {
           </AnimateIn>
           <AnimateIn delay={0.13}>
             <p className="body-lg mt-4">
-              BOA started with Ms Zika. As more families joined, she built a
-              team of experienced tutors who share her approach: personal,
-              clear, and honest about progress.
+              BOA started with Ms Zika, whose passion and dedication laid our foundation.
+              Today, our team of experienced, caring tutors works alongside Ms Zika to give
+              every child more support, more feedback, and more opportunities to shine.
             </p>
           </AnimateIn>
 
