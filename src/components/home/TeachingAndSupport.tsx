@@ -1,5 +1,5 @@
 /**
- * TeachingAndSupport — split layout, image-left/copy-right.
+ * TeachingAndSupport: split layout, image-left/copy-right.
  * The navy avatar square is kept; it's an honest placeholder, not pretending to be a photo.
  * All text tokens used correctly.
  */
@@ -24,7 +24,7 @@ export default function TeachingAndSupport() {
           <div className="relative">
             <div className="aspect-square w-full max-w-sm rounded-2xl bg-navy p-10 lg:max-w-none">
               <span className="font-display text-8xl font-semibold text-yellow" aria-hidden="true">Z</span>
-              <p className="mt-4 text-sm font-bold uppercase tracking-widest text-white/50">
+              <p className="mt-4 text-sm font-bold uppercase tracking-widest text-white/90">
                 Ms Zika · Founder
               </p>
             </div>
@@ -51,7 +51,7 @@ export default function TeachingAndSupport() {
             </p>
           </AnimateIn>
 
-          {/* Feature list — replaces a second paragraph blob */}
+          {/* Feature list: replaces a second paragraph blob */}
           <AnimateIn delay={0.18}>
             <ul className="mt-6 space-y-3">
               {points.map((p) => (

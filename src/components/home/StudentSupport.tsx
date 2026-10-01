@@ -44,7 +44,7 @@ export default function StudentSupport() {
             </AnimateIn>
             <AnimateIn delay={0.14}>
               <p className="mt-6 text-base leading-relaxed text-muted lg:text-[1.0625rem]">
-                At Bridge Online Academy your child's wellbeing sits alongside
+                At Bridge Online Academy your child&apos;s wellbeing sits alongside
                 their academic progress. Many families join us not only for the
                 teaching, but to find confidence and steady support at school.
               </p>

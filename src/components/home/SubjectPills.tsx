@@ -1,6 +1,6 @@
 /**
  * SubjectPills
- * No shadows — separation via background colour only.
+ * No shadows: separation via background colour only.
  * Contrast-checked: pills with light/mid backgrounds use dark ink text.
  * Tap target: min 44px height on mobile.
  * Focus rings on every pill (they are now Links, not divs).
@@ -31,12 +31,12 @@ const subjects: Subject[] = [
   { id: "english",   label: "English",          icon: FiBookOpen,      colour: "#4C6EF5", darkText: false },
   { id: "science",   label: "Science",          icon: MdScience,       colour: "#2F9E6E", darkText: false },
   { id: "health",    label: "Health Ed.",       icon: FiHeart,         colour: "#E0576B", darkText: false },
-  { id: "yoruba",    label: "Yoruba",           icon: FaLanguage,      colour: "#E8823A", darkText: true  },
+  { id: "yoruba",    label: "Yoruba",           icon: FaLanguage,      colour: "#E8823A", darkText: false },
   { id: "hausa",     label: "Hausa",            icon: FaLanguage,      colour: "#2FA6A0", darkText: false },
   { id: "igbo",      label: "Igbo",             icon: FiGlobe,         colour: "#8B5CF6", darkText: false },
   { id: "arts",      label: "Arts",             icon: FaPalette,       colour: "#D6519B", darkText: false },
   { id: "writing",   label: "Creative Writing", icon: FiPenTool,       colour: "#3E8EDE", darkText: false },
-  { id: "mental",    label: "Mental Maths",     icon: FaBrain,         colour: "#C9A227", darkText: true  },
+  { id: "mental",    label: "Mental Maths",     icon: FaBrain,         colour: "#C9A227", darkText: false },
   { id: "physics",   label: "Physics",          icon: FaAtom,          colour: "#5D6FE0", darkText: false },
   { id: "chemistry", label: "Chemistry",        icon: FaFlask,         colour: "#34B37E", darkText: false },
   // Biology: darkened slightly from #6FBE44 to pass AA contrast with white
@@ -45,7 +45,7 @@ const subjects: Subject[] = [
   { id: "ict",       label: "Computer Studies", icon: FiMonitor,       colour: "#1A7A9A", darkText: false },
   { id: "coding",    label: "Coding",           icon: FaCode,          colour: "#2563EB", darkText: false },
   { id: "french",    label: "French",           icon: FiMessageCircle, colour: "#DB5A8C", darkText: false },
-  { id: "geography", label: "Geography",        icon: FiMapPin,        colour: "#C77B2E", darkText: true  },
+  { id: "geography", label: "Geography",        icon: FiMapPin,        colour: "#C77B2E", darkText: false },
   { id: "literature",label: "Literature",       icon: FiBookOpen,      colour: "#9B6BD6", darkText: false },
   { id: "music",     label: "Music",            icon: FiMusic,         colour: "#E0509A", darkText: false },
 ];
@@ -79,7 +79,7 @@ export default function SubjectPills() {
             </Link>
           ))}
 
-          {/* "and more" — decorative, no link needed */}
+          {/* "and more": decorative, no link needed */}
           <div
             className="inline-flex h-11 w-[calc(50%-0.3125rem)] items-center justify-center gap-2 rounded-xl bg-navy px-3 text-sm font-bold text-white sm:w-auto sm:min-w-40 sm:gap-3 sm:rounded-2xl sm:px-6 sm:py-4 sm:text-base"
             aria-hidden="true"

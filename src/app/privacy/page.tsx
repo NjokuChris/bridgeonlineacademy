@@ -37,8 +37,8 @@ export default function PrivacyPage() {
             <Section title="1. What we collect">
               <p>
                 When a parent or guardian submits an enrolment form, we collect
-                the parent's full name, email address, phone number and country
-                of residence, and the learner's full name and current school
+                the parent&apos;s full name, email address, phone number and country
+                of residence, and the learner&apos;s full name and current school
                 year or date of birth.
               </p>
               <p>
@@ -76,14 +76,14 @@ export default function PrivacyPage() {
 
             <Section title="3. Who can see it">
               <p>
-                A family's data is accessible to the parents or guardians
-                linked to that family, the tutors assigned to their child's
-                classes, and BOA's admin team. No family can see another
-                family's data.
+                A family&apos;s data is accessible to the parents or guardians
+                linked to that family, the tutors assigned to their child&apos;s
+                classes, and BOA&apos;s admin team. No family can see another
+                family&apos;s data.
               </p>
               <p>
                 Tutors can see the names and progress records of the learners
-                they teach. They cannot see other learners' data.
+                they teach. They cannot see other learners&apos; data.
               </p>
               <p>
                 We do not sell personal data to third parties. We share data
