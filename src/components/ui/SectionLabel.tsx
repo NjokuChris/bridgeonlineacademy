@@ -1,9 +1,9 @@
 /**
- * SectionLabel — the eyebrow pill above every section heading.
+ * SectionLabel: the eyebrow pill above every section heading.
  *
  * tone="default"  green pill on light backgrounds
  * tone="light"    same pill on dark (navy) backgrounds
- * tone="plain"    no pill, just the eyebrow text — for tighter layouts
+ * tone="plain"    no pill, just the eyebrow text: for tighter layouts
  */
 interface SectionLabelProps {
   children: React.ReactNode;

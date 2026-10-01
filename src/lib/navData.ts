@@ -10,6 +10,7 @@ export const NAV_ITEMS: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Programmes", href: "/programmes" },
   { label: "About", href: "/about" },
+  { label: "Team & Tutors", href: "/team" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];

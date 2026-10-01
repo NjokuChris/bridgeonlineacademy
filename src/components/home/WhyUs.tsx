@@ -1,10 +1,10 @@
 "use client";
 
 /**
- * WhyUs — split layout. Header left, feature list right.
+ * WhyUs: split layout. Header left, feature list right.
  * All token values: text-ink, text-muted, no hardcoded hex.
  * Icons: single consistent set (react-icons/fi, thin strokes).
- * Hover: subtle bg tint only — no transforms.
+ * Hover: subtle bg tint only - no transforms.
  */
 import { FiUser, FiUsers, FiHeart, FiMessageSquare } from "react-icons/fi";
 import AnimateIn from "@/components/ui/AnimateIn";
@@ -36,7 +36,7 @@ export default function WhyUs() {
           </AnimateIn>
         </div>
 
-        {/* Right: feature rows — not a grid of cards */}
+        {/* Right: feature rows - not a grid of cards */}
         <div className="space-y-4">
           {siteConfig.differentiators.map((feat, i) => {
             const Icon = icons[i % icons.length];

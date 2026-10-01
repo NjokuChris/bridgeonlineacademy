@@ -7,6 +7,7 @@ import { whatsappLink, telLink, mailtoLink } from "@/lib/contact";
 const exploreLinks: [string, string][] = [
   ["Home", "/"],
   ["About", "/about"],
+  ["Team & Tutors", "/team"],
   ["Programmes", "/programmes"],
   ["FAQ", "/faq"],
   ["Contact", "/contact"],
@@ -43,7 +44,7 @@ export default function Footer() {
           <p className="mt-4 text-sm leading-relaxed text-muted">
             {siteConfig.slogan}
           </p>
-          {/* Social links — 44px tap targets */}
+          {/* Social links: 44px tap targets */}
           <div className="mt-5 flex items-center gap-3">
             <a
               href={siteConfig.contact.whatsapp.base}

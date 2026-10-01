@@ -47,7 +47,7 @@ function ProgrammesMenu() {
           className="transition-transform group-hover:rotate-180"
         />
       </Link>
-      {/* Dropdown — border only, no shadow */}
+      {/* Dropdown: border only, no shadow */}
       <div className="invisible absolute left-0 top-full z-50 w-80 translate-y-2 rounded-xl border border-border bg-white p-5 opacity-0 transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
         <p className="text-xs font-bold uppercase tracking-widest text-link">
           Subjects include
