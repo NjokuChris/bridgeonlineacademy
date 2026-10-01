@@ -25,7 +25,7 @@ export default function FAQs({ standalone = false }: { standalone?: boolean }) {
               </h2>
             </div>
             {!standalone && (
-              <a href="/faq" className="focus-ring text-sm font-bold text-link hover:underline">
+              <a href="/contact#faq" className="focus-ring text-sm font-bold text-link hover:underline">
                 See all questions →
               </a>
             )}

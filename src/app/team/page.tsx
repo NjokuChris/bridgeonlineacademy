@@ -104,9 +104,11 @@ export default function TeamPage() {
             The teachers behind your child&apos;s progress.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
-            Bridge Online Academy started with one teacher, Ms Zika, and has grown
-            deliberately into a team of experienced tutors. Every teacher is selected
-            for subject depth, clear explanations and genuine patience with learners.
+            BOA started with <strong className="text-ink">Ms Zika</strong>, whose passion and
+            dedication laid the foundation of our school. Today, we have grown into a{" "}
+            <strong className="text-ink">team of experienced, caring tutors</strong> who work
+            alongside Ms Zika to give every child more support, more feedback, and more opportunities
+            to shine.
           </p>
         </div>
       </section>

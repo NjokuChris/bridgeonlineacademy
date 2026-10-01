@@ -49,10 +49,17 @@
   --radius-full: 9999px;   /* pills, avatars        */
 }
 
+:root {
+  color-scheme: light;
+}
+
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
 
 body {
   margin: 0;

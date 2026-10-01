@@ -79,9 +79,9 @@ export default function Hero() {
           </h1>
 
           <p className="body-lg mt-6 max-w-lg">
-            Small groups, experienced tutors, three sessions a week. Follow
-            the full Nigerian curriculum or come for a single subject, at
-            any age, with no one-size-fits-all approach.
+            An online learning community dedicated to helping every child grow with
+            confidence: academically, personally, and culturally, with quality
+            teaching and personal attention.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-3">
